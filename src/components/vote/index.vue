@@ -7,8 +7,17 @@
 import axios from 'axios'
 export default {
     props: {
+        /**
+         * the api url eg. http://localhost:8080/api
+         */
         url: String,
+        /**
+         * the vote slug
+         */
         slug: String,
+        /**
+         * default vote fail message
+         */
         voteFailMessage: {
             type: String,
             default: 'voted before'

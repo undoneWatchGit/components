@@ -8,11 +8,11 @@
 
 ## Props
 
-| Name                | Type     | Description | Default          |
-| ------------------- | -------- | ----------- | ---------------- |
-| `url`               | `String` |             |                  |
-| `slug`              | `String` |             |                  |
-| `vote-fail-message` | `String` |             | `"voted before"` |
+| Name                | Type     | Description                               | Default          |
+| ------------------- | -------- | ----------------------------------------- | ---------------- |
+| `url`               | `String` | the api url eg. http://localhost:8080/api |                  |
+| `slug`              | `String` | the vote slug                             |                  |
+| `vote-fail-message` | `String` | default vote fail message                 | `"voted before"` |
 
 ## Events
 
