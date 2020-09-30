@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Vote
+    url="http://localhost:8080/api"
+    slug="hello"
+    voteFailMessage="hihihihi"
+    @voted="onSuccess"
+    @vote-faild="onFail"
+  >
+    <template v-slot="{ voteEvent, vote }">
+      <div v-for="(item, index) in voteEvent.children" :key="index" @click="vote(item.productId)">
+        {{ item.productId }}
+      </div>
+    </template>
+  </Vote>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Vote from './components/vote/index'
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    Vote
+  },
+  methods: {
+    onFail(e) {
+      console.log(e)
+    },
+    onSuccess(e) {
+      console.log(e)
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
