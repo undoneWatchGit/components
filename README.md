@@ -1,19 +1,23 @@
-# components
+# index
 
-## Project setup
-```
-yarn install
-```
+## Slots
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+| Name      | Description |
+| --------- | ----------- |
+| `default` | &nbsp;      |
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Props
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+| Name                | Type     | Description | Default          |
+| ------------------- | -------- | ----------- | ---------------- |
+| `url`               | `String` |             |                  |
+| `slug`              | `String` |             |                  |
+| `vote-fail-message` | `String` |             | `"voted before"` |
+
+## Events
+
+| Name         | Description                                                       |
+| ------------ | ----------------------------------------------------------------- |
+| `vote-faild` | <br>**Arguments**<br><ul><li>**`voteFailMessage: any`**</li></ul> |
+| `voted`      | <br>**Arguments**<br><ul><li>**`data: any`**</li></ul>            |
+
