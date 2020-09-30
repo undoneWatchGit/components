@@ -1,55 +1,27 @@
-# zoom
+# vote
+
+usage:
+```
+<vote url="http://localhost:8080/api" slug="hello" >
+<template v-slot="{ voteEvent, vote }">
+<div v-for="(item, index) in voteEvent" :key="index" @click="vote">
+{{ item }}
+</div>
+</template>
+</vote>
+```
 
 ## Slots
 
 | Name      | Description |
 | --------- | ----------- |
-| `reset`   |             |
-| `overlay` |             |
-| `pointer` | &nbsp;      |
+| `default` | &nbsp;      |
 
 ## Props
 
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `image` | `String` |             |
-| `texts` | `Array`  | &nbsp;      |
-
-## Methods
-
-### reset()
-
-**Syntax**
-
-```typescript
-reset(): void
-```
-
-### zoomout()
-
-**Syntax**
-
-```typescript
-zoomout(): void
-```
-
-### onclick()
-
-**Syntax**
-
-```typescript
-onclick(item: unknow, index: unknow): void
-```
-
-### zoomTo()
-
-**Syntax**
-
-```typescript
-zoomTo(item: unknow): void
-```
-
-         |
+| Name                | Type     | Description                               | Default          |
+| ------------------- | -------- | ----------------------------------------- | ---------------- |
+| `url`               | `String` | the api url eg. http://localhost:8080/api |                  |
 | `slug`              | `String` | the vote slug                             |                  |
 | `vote-fail-message` | `String` | default vote fail message                 | `"voted before"` |
 
