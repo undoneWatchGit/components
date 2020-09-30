@@ -10,10 +10,11 @@
 
 ## Props
 
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `image` | `String` |             |
-| `texts` | `Array`  | &nbsp;      |
+| Name    | Type     | Description           |
+| ------- | -------- | --------------------- |
+| `image` | `String` |                       |
+| `texts` | `Array`  |                       |
+| `foo`   | `String` | this is for something |
 
 ## Methods
 

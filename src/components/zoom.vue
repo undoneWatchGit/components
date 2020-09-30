@@ -72,6 +72,12 @@ export default {
         texts: {
             type: Array,
         },
+        /**
+         * this is for something
+         */
+        foo: {
+            type: String
+        }
     },
     data() {
         return {

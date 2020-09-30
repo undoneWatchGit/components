@@ -10,10 +10,11 @@
 
 ## Props
 
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `image` | `String` |             |
-| `texts` | `Array`  | &nbsp;      |
+| Name    | Type     | Description           |
+| ------- | -------- | --------------------- |
+| `image` | `String` |                       |
+| `texts` | `Array`  |                       |
+| `foo`   | `String` | this is for something |
 
 ## Methods
 
@@ -49,8 +50,7 @@ onclick(item: unknow, index: unknow): void
 zoomTo(item: unknow): void
 ```
 
-         |
-| `slug`              | `String` | the vote slug                             |                  |
+ |                  |
 | `vote-fail-message` | `String` | default vote fail message                 | `"voted before"` |
 
 ## Events
