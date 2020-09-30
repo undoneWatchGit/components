@@ -32,3 +32,21 @@ usage:
 | `vote-faild` | <br>**Arguments**<br><ul><li>**`voteFailMessage: any`**</li></ul> |
 | `voted`      | <br>**Arguments**<br><ul><li>**`data: any`**</li></ul>            |
 
+## Methods
+
+### fetchData()
+
+**Syntax**
+
+```typescript
+async fetchData(): Promise
+```
+
+### vote()
+
+**Syntax**
+
+```typescript
+async vote(voteId: unknow): Promise
+```
+

@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "doc": "vuedoc.md src/components/*/*.vue --ignore-data --ignore-methods --ignore-computed  --output README.md"
+    "doc": "vuedoc.md src/components/*/*.vue --ignore-data --ignore-computed --output README.md"
   },
   "dependencies": {
     "axios": "^0.20.0",
