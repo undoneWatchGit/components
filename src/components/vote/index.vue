@@ -5,7 +5,21 @@
 </template>
 <script>
 import axios from 'axios'
+/**
+ * usage:
+ * ```
+ * <vote url="http://localhost:8080/api" slug="hello" >
+ *   <template v-slot="{ voteEvent, vote }">
+ *      <div v-for="(item, index) in voteEvent" :key="index" @click="vote">
+ *         {{ item }}
+ *      </div>
+ *   </template>
+ *  </vote>
+ * ```
+ * 
+ */
 export default {
+    name: 'vote',
     props: {
         /**
          * the api url eg. http://localhost:8080/api

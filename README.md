@@ -1,4 +1,15 @@
-# index
+# vote
+
+usage:
+```
+<vote url="http://localhost:8080/api" slug="hello" >
+<template v-slot="{ voteEvent, vote }">
+<div v-for="(item, index) in voteEvent" :key="index" @click="vote">
+{{ item }}
+</div>
+</template>
+</vote>
+```
 
 ## Slots
 
