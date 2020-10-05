@@ -55,12 +55,8 @@ export default {
             
             const days = Math.floor(timeLeft / 86400)
             const hours = Math.floor((timeLeft - (days * 86400)) / 3600)
-            const minutes = Math.floor(
-                (timeLeft - hours * 3600) / 60
-            )
-            const seconds = Math.floor(
-                timeLeft - hours * 3600 - minutes * 60
-            )
+            const minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60)
+            const seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)))
 
             const newTimer = {
                 days,
