@@ -6,6 +6,15 @@
 </template>
 <script>
 import dayjs from 'dayjs'
+/**
+ * example:
+ * const endtime = 'Wed Sep 24 2020 17:00:00 GMT+0800'
+ * <count-down end-time="new Date(endtime)" >
+ *  <template v-slot="{ hours, minutes, seconds }">
+ *    
+ *  </template>
+ * </count-down>
+ */
 export default {
     props: {
         /**
