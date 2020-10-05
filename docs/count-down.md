@@ -1,12 +1,12 @@
 # count-down
 
 example:
-```
+```javascript
 const endtime = 'Wed Sep 24 2020 17:00:00 GMT+0800'
 <count-down end-time="new Date(endtime)" >
-<template v-slot="{ hours, minutes, seconds }">
+ <template v-slot="{ hours, minutes, seconds }">
 
-</template>
+ </template>
 </count-down>
 ```
 
