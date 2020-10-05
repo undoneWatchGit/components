@@ -1,7 +1,7 @@
 <template>
     <div>
-        <!-- the slot provide hours, minutes, seconds -->
-        <slot :hours="hours" :minutes="minutes" :seconds="seconds"></slot>
+        <!-- the slot provide days, hours, minutes, seconds -->
+        <slot :days="days" :hours="hours" :minutes="minutes" :seconds="seconds"></slot>
     </div>
 </template>
 <script>
@@ -11,7 +11,7 @@ import dayjs from 'dayjs'
  * ```javascript
  * const endtime = 'Wed Sep 24 2020 17:00:00 GMT+0800'
  * <count-down :end-time="new Date(endtime)" >
- *  <template v-slot="{ hours, minutes, seconds }">
+ *  <template v-slot="{ days, hours, minutes, seconds }">
  *    
  *  </template>
  * </count-down>
@@ -47,11 +47,14 @@ export default {
     methods: {
         makeTimer() {
             let timeLeft = dayjs(this.endTime).diff(dayjs(), 'second')
+            
             if (timeLeft < 0) {
                 this.onend()
                 return
             }
-            const hours = Math.floor(timeLeft / 3600)
+            
+            const days = Math.floor(timeLeft / 86400)
+            const hours = Math.floor((timeLeft - (days * 86400)) / 3600)
             const minutes = Math.floor(
                 (timeLeft - hours * 3600) / 60
             )
@@ -60,6 +63,7 @@ export default {
             )
 
             const newTimer = {
+                days,
                 minutes,
                 hours,
                 seconds,

@@ -4,7 +4,7 @@
 ```javascript
 const endtime = 'Wed Sep 24 2020 17:00:00 GMT+0800'
 <count-down :end-time="new Date(endtime)" >
- <template v-slot="{ hours, minutes, seconds }">
+ <template v-slot="{ days, hours, minutes, seconds }">
 
  </template>
 </count-down>
@@ -12,9 +12,9 @@ const endtime = 'Wed Sep 24 2020 17:00:00 GMT+0800'
 
 ## Slots
 
-| Name      | Description                              |
-| --------- | ---------------------------------------- |
-| `default` | the slot provide hours, minutes, seconds |
+| Name      | Description                                    |
+| --------- | ---------------------------------------------- |
+| `default` | the slot provide days, hours, minutes, seconds |
 
 ## Props
 
