@@ -27,10 +27,11 @@ usage:
 
 ## Events
 
-| Name         | Description                                                       |
-| ------------ | ----------------------------------------------------------------- |
-| `vote-faild` | <br>**Arguments**<br><ul><li>**`voteFailMessage: any`**</li></ul> |
-| `voted`      | <br>**Arguments**<br><ul><li>**`data: any`**</li></ul>            |
+| Name         | Description                                                                              |
+| ------------ | ---------------------------------------------------------------------------------------- |
+| `fetch`      | send out the data after fetch<br>**Arguments**<br><ul><li>**`voteEvent: any`**</li></ul> |
+| `vote-faild` | <br>**Arguments**<br><ul><li>**`voteFailMessage: any`**</li></ul>                        |
+| `voted`      | <br>**Arguments**<br><ul><li>**`data: any`**</li></ul>                                   |
 
 ## Methods
 

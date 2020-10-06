@@ -46,6 +46,10 @@ export default {
         async fetchData() {
             const { data } = await axios.get(`${this.url}/vote/${this.slug}`)
             this.voteEvent = data
+            /**
+             * send out the data after fetch
+             */
+            this.$emit('fetch', this.voteEvent)
         },
         async vote(voteId) {
             if (localStorage.getItem(`vote-${this.slug}`)) {
